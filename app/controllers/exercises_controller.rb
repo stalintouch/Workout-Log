@@ -2,6 +2,7 @@ class ExercisesController < ApplicationController
   before_action :find_exercise, only: [:show, :edit, :update, :destroy]
 
   def index
+    @exercises = Exercise.all.order('created_at DESC')
   end
 
   def show
@@ -24,9 +25,16 @@ class ExercisesController < ApplicationController
   end
 
   def update
+    if @exercise.update(exercise_params)
+      redirect_to @exercise 
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @exercise.destroy
+    redirect_to root_path
   end
 
   private

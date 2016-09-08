@@ -3,3 +3,7 @@
   %p= @exercise.workout
   %p= @exercise.mood
   %p= @exercise.length
+
+= link_to "Back", root_path  
+= link_to 'Edit', edit_exercise_path(@exercise) |
+= link_to 'Delete', exercise_path, method: :delete, data: { confirm: "Are you sure" }
