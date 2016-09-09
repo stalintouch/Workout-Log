@@ -4,6 +4,14 @@
   %p= @exercise.mood
   %p= @exercise.length
 
+#exercises
+  %h2 Exercises
+  = render @exercise.routines
+
+  %h3 Add an exercise
+  = render 'routines/form'
+
+
 = link_to "Back", root_path  
-= link_to 'Edit', edit_exercise_path(@exercise) |
+= link_to 'Edit', edit_exercise_path(@exercise) 
 = link_to 'Delete', exercise_path, method: :delete, data: { confirm: "Are you sure" }

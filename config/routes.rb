@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :exercises
+  resources :exercises do 
+    resources :routines
+  end
 
   root 'exercises#index'
 end
