@@ -1,6 +1,7 @@
-= simple_form_for([@exercise, @exercise.routines.build]) do |f|
-  = f.input :name, input_html: { class: "form-control" }
-  = f.input :sets, input_html: { class: "form-control" }
-  = f.input :reps, input_html: { class: "form-control" }
-  %br/
-  = f.button :submit
+#routine_form
+  = simple_form_for([@exercise, @exercise.routines.build]) do |f|
+    = f.input :name, input_html: { class: "form-control" }
+    = f.input :sets, input_html: { class: "form-control" }
+    = f.input :reps, input_html: { class: "form-control" }
+    %br/
+    = f.button :submit
