@@ -1,8 +1,8 @@
 #workout
-  %p= @exercise.date
-  %p= @exercise.workout
-  %p= @exercise.mood
-  %p= @exercise.length
+  %h3= "Date: #{@exercise.date}" 
+  %h4= "Workout Area: #{@exercise.workout}"
+  %p= "Mood: #{@exercise.mood}" 
+  %p= "Length: #{@exercise.length}"
 
 #exercises
   %h2 Exercises
@@ -15,3 +15,5 @@
 = link_to "Back", root_path  
 = link_to 'Edit', edit_exercise_path(@exercise) 
 = link_to 'Delete', exercise_path, method: :delete, data: { confirm: "Are you sure" }
+
+
